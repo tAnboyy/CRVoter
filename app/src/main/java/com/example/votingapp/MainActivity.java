@@ -25,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
         usn = findViewById(R.id.usn);
         phone = findViewById(R.id.phone);
         db = openOrCreateDatabase("VoterDB", MODE_PRIVATE, null);
-        db.execSQL("DROP TABLE VoterDB");
         db.execSQL("CREATE TABLE IF NOT EXISTS VoterDB(usn varchar(10) primary key,name varchar(25),phone varchar(10),voted varchar(20))");
         sub.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,7 +46,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
     }
     private void switchActivities() {
         Intent switchActivityIntent = new Intent(this, MainActivity2.class);
