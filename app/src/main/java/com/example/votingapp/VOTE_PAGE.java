@@ -10,11 +10,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-public class MainActivity2 extends AppCompatActivity {
+public class VOTE_PAGE extends AppCompatActivity {
     RadioGroup rg;
     Button b;
     SQLiteDatabase db;
@@ -29,9 +28,13 @@ public class MainActivity2 extends AppCompatActivity {
             public void onClick(View view) {
                 int id=rg.getCheckedRadioButtonId();
                 if(id==-1)
-                    Toast.makeText(MainActivity2.this,"None selected",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(VOTE_PAGE.this,"None selected",Toast.LENGTH_SHORT).show();
                 else{
-                    Intent i = new Intent(MainActivity2.this, MainActivity.class);
+
+//                    db.execSQL();
+
+
+                    Intent i = new Intent(VOTE_PAGE.this, VOTER_INFO.class);
                     startActivity(i);
                 }
             }

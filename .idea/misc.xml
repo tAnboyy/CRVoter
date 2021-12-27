@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Dhruv/AndroidStudioProjects/VotingApp/app/src/main/res/layout/activity_main.xml" value="0.17300724637681159" />
+        <entry key="..\:/Users/Dhruv/AndroidStudioProjects/VotingApp/app/src/main/res/layout/activity_add_candidate.xml" value="0.20052083333333334" />
+        <entry key="..\:/Users/Dhruv/AndroidStudioProjects/VotingApp/app/src/main/res/layout/activity_admin_login.xml" value="0.18645833333333334" />
+        <entry key="..\:/Users/Dhruv/AndroidStudioProjects/VotingApp/app/src/main/res/layout/activity_first.xml" value="0.2" />
+        <entry key="..\:/Users/Dhruv/AndroidStudioProjects/VotingApp/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/Dhruv/AndroidStudioProjects/VotingApp/app/src/main/res/layout/activity_main2.xml" value="0.17300724637681159" />
         <entry key="..\:/Users/Dhruv/AndroidStudioProjects/VotingApp/app/src/main/res/menu/mymenu.xml" value="0.14375" />
       </map>
