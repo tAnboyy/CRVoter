@@ -10,10 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.VotingApp">
         <activity
-            android:name=".ADD_CANDIDATE"
-            android:exported="true" />
-        <activity
-            android:name=".ADMIN_LOGIN"
+            android:name=".CALC"
             android:exported="true" />
         <activity
             android:name=".First"

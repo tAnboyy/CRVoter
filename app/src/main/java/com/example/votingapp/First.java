@@ -9,19 +9,26 @@ import android.widget.Button;
 
 public class First extends AppCompatActivity {
 
-    Button button2;
+    Button voter,admin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
-
-        button2 = findViewById(R.id.button2);
-        button2.setOnClickListener(new View.OnClickListener() {
+        voter=findViewById(R.id.voter);
+        admin=findViewById(R.id.admin);
+        voter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(First.this, VOTER_INFO.class);
-                startActivity(i);
+                Intent intent = new Intent(First.this, VOTER_INFO.class);
+                startActivity(intent);
+            }
+        });
+        admin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(First.this, CALC.class);
+                startActivity(intent);
             }
         });
     }
