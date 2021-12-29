@@ -16,7 +16,7 @@ public class VOTE_PAGE extends AppCompatActivity {
     static VOTE_PAGE INSTANCE;
     RadioGroup rg;
     RadioButton rb;
-    Button b,back,clear;
+    Button b,back;
     SQLiteDatabase db;
     SharedPreferences sp;
     int c1=0;
@@ -30,7 +30,6 @@ public class VOTE_PAGE extends AppCompatActivity {
         b = findViewById(R.id.vote);
         rg = findViewById(R.id.radio);
         back=findViewById(R.id.back);
-        clear=findViewById(R.id.clear);
         sp = getSharedPreferences("your_prefs", VOTE_PAGE.MODE_PRIVATE);
         SharedPreferences.Editor e = sp.edit();
         b.setOnClickListener(new View.OnClickListener() {
@@ -42,9 +41,9 @@ public class VOTE_PAGE extends AppCompatActivity {
                 else {
                         rb =(RadioButton) findViewById(id);
                         String s1=rb.getText().toString();
-                        c1= sp.getInt("c1", -1);
-                        c2= sp.getInt("c2", -1);
-                        c3= sp.getInt("c3", -1);
+                        c1= sp.getInt("c1", 0);
+                        c2= sp.getInt("c2", 0);
+                        c3= sp.getInt("c3", 0);
                         if(s1.equalsIgnoreCase("Thanmay")) {
                             c1++;
                         }
@@ -71,7 +70,7 @@ public class VOTE_PAGE extends AppCompatActivity {
                 startActivity(i2);
             }
         });
-        
+
     }
 
 
