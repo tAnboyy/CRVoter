@@ -38,10 +38,10 @@ public class VOTER_INFO extends AppCompatActivity {
                 if (n.equals("") || u.equals("") || p.equals(""))
                     Toast.makeText(VOTER_INFO.this, "Enter All Fields.", Toast.LENGTH_SHORT).show();
                 else {
-                    switchActivities();
                     Cursor c = db.rawQuery("Select * from Voter where usn=?", new String[]{u});
                     if (c.getCount() == 0) {
                         db.execSQL("Insert into Voter values('"+u+"','"+n+"','"+p+"')");
+                        switchActivities();
                     } else
                         Toast.makeText(VOTER_INFO.this, "USN voted, please try another one.", Toast.LENGTH_SHORT).show();
                 }
@@ -54,6 +54,7 @@ public class VOTER_INFO extends AppCompatActivity {
                 startActivity(i2);
             }
         });
+
     }
 
     private void switchActivities() {

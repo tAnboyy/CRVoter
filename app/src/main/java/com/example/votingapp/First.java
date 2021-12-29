@@ -6,17 +6,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class First extends AppCompatActivity {
 
-    Button voter,admin;
+    Button voter,ad;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
         voter=findViewById(R.id.voter);
-        admin=findViewById(R.id.admin);
+        ad=findViewById(R.id.admin);
         voter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -24,11 +25,11 @@ public class First extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        admin.setOnClickListener(new View.OnClickListener() {
+        ad.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(First.this, CALC.class);
-                startActivity(intent);
+                Intent i= new Intent(First.this,CALC.class);
+                startActivity(i);
             }
         });
     }
