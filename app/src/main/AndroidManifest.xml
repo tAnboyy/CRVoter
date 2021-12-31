@@ -10,28 +10,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.VotingApp">
         <activity
-            android:name=".CALC"
+            android:name=".AdminFeaturesActivity"
             android:exported="true" />
         <activity
-            android:name=".First"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".VOTE_PAGE"
+            android:name=".SubmitVoteActivity"
             android:exported="true" />
         <activity
-            android:name=".VOTER_INFO"
+            android:name=".VoterLoginActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

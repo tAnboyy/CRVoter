@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".VOTE_PAGE">
+    tools:context=".SubmitVoteActivity">
 
   <Button
       android:id="@+id/vote"
@@ -13,38 +13,10 @@
       android:text="Vote"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.498"
+      app:layout_constraintHorizontal_bias="0.55"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintVertical_bias="0.749" />
-
-  <RadioGroup
-      android:id="@+id/radio"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent">
-
-    <RadioButton
-        android:id="@+id/radioButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Thanmay" />
-
-    <RadioButton
-        android:id="@+id/radioButton2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Dhruv" />
-
-    <RadioButton
-        android:id="@+id/radioButton3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Alden" />
-  </RadioGroup>
+      app:layout_constraintVertical_bias="0.714" />
 
   <Button
       android:id="@+id/back"
@@ -53,9 +25,109 @@
       android:text="Back"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.498"
+      app:layout_constraintHorizontal_bias="0.188"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintVertical_bias="0.903" />
+      app:layout_constraintVertical_bias="0.841" />
+
+  <RadioGroup
+      android:id="@+id/radio"
+      android:layout_width="103dp"
+      android:layout_height="370dp"
+      android:layout_marginTop="144dp"
+      app:layout_constraintEnd_toStartOf="@+id/guideline2"
+      app:layout_constraintHorizontal_bias="0.752"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent">
+
+    <RadioButton
+        android:id="@+id/rb1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="300px"
+        android:hint="name" />
+
+    <RadioButton
+        android:id="@+id/rb2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="300px"
+        android:hint="name" />
+
+    <RadioButton
+        android:id="@+id/rb3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="name" />
+
+  </RadioGroup>
+
+  <TextView
+      android:id="@+id/tv1"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="148dp"
+      android:text="TextView"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="@+id/guideline2"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <TextView
+      android:id="@+id/tv2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="52dp"
+      android:text="TextView"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="@+id/guideline2"
+      app:layout_constraintTop_toBottomOf="@+id/ib1" />
+
+  <ImageView
+      android:id="@+id/ib1"
+      android:layout_width="43dp"
+      android:layout_height="34dp"
+      android:layout_marginTop="20dp"
+      android:src="@drawable/instagram"
+      app:layout_constraintTop_toBottomOf="@+id/tv1"
+      tools:layout_editor_absoluteX="213dp" />
+
+  <TextView
+      android:id="@+id/tv3"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="TextView"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="@+id/guideline2"
+      tools:layout_editor_absoluteY="414dp" />
+
+  <androidx.constraintlayout.widget.Guideline
+      android:id="@+id/guideline2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      app:layout_constraintGuide_begin="228dp" />
+
+  <ImageView
+      android:id="@+id/ib2"
+      android:layout_width="39dp"
+      android:layout_height="38dp"
+      android:layout_marginStart="36dp"
+      android:layout_marginTop="20dp"
+      android:src="@drawable/instagram"
+      app:layout_constraintStart_toEndOf="@+id/radio"
+      app:layout_constraintTop_toBottomOf="@+id/tv2" />
+
+  <ImageView
+      android:id="@+id/ib3"
+      android:layout_width="38dp"
+      android:layout_height="45dp"
+      android:layout_marginStart="4dp"
+      android:layout_marginTop="36dp"
+      android:src="@drawable/instagram"
+      app:layout_constraintStart_toStartOf="@+id/guideline2"
+      app:layout_constraintTop_toBottomOf="@+id/tv3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

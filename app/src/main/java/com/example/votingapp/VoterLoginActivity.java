@@ -11,8 +11,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class VOTER_INFO extends AppCompatActivity {
-    Button sub,back;
+public class VoterLoginActivity extends AppCompatActivity {
+    Button sub, back;
     EditText name, usn, phone;
     SQLiteDatabase db;
 
@@ -24,7 +24,7 @@ public class VOTER_INFO extends AppCompatActivity {
         name = findViewById(R.id.name);
         usn = findViewById(R.id.usn);
         phone = findViewById(R.id.phone);
-        back=findViewById(R.id.back1);
+        back = findViewById(R.id.back1);
         db = openOrCreateDatabase("Voter", MODE_PRIVATE, null);
         //db.execSQL("DROP TABLE Voter");
         db.execSQL("CREATE TABLE IF NOT EXISTS Voter(usn varchar(20) primary key,name varchar(25),phone varchar(10))");
@@ -36,21 +36,21 @@ public class VOTER_INFO extends AppCompatActivity {
                 String p = phone.getText().toString();
 
                 if (n.equals("") || u.equals("") || p.equals(""))
-                    Toast.makeText(VOTER_INFO.this, "Enter All Fields.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(VoterLoginActivity.this, "Enter All Fields.", Toast.LENGTH_SHORT).show();
                 else {
                     Cursor c = db.rawQuery("Select * from Voter where usn=?", new String[]{u});
                     if (c.getCount() == 0) {
-                        db.execSQL("Insert into Voter values('"+u+"','"+n+"','"+p+"')");
+                        db.execSQL("Insert into Voter values('" + u + "','" + n + "','" + p + "')");
                         switchActivities();
                     } else
-                        Toast.makeText(VOTER_INFO.this, "USN voted, please try another one.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(VoterLoginActivity.this, "USN voted, please try another one.", Toast.LENGTH_SHORT).show();
                 }
             }
         });
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i2 = new Intent(VOTER_INFO.this, First.class);
+                Intent i2 = new Intent(VoterLoginActivity.this, MainActivity.class);
                 startActivity(i2);
             }
         });
@@ -58,7 +58,7 @@ public class VOTER_INFO extends AppCompatActivity {
     }
 
     private void switchActivities() {
-        Intent switchActivityIntent = new Intent(VOTER_INFO.this, VOTE_PAGE.class);
+        Intent switchActivityIntent = new Intent(VoterLoginActivity.this, SubmitVoteActivity.class);
         startActivity(switchActivityIntent);
     }
 }
